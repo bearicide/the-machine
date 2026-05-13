@@ -1,0 +1,10 @@
+{
+  "name": "MATTBEAR Pinball Ritual Machine",
+  "short_name": "RitualMachine",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#05010a",
+  "theme_color": "#05010a",
+  "description": "Experimental neon pinball arcade by MATTBEAR",
+  "icons": []
+}
