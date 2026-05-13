@@ -23,7 +23,18 @@
     </section>
 
     <section class="machine-wrap">
-      <canvas id="game" width="720" height="1080" aria-label="Pinball game canvas"></canvas>
+      <div class="game-column">
+        <canvas id="game" width="720" height="1080" aria-label="Pinball game canvas"></canvas>
+        <section class="mobile-panel" aria-label="Mobile controls">
+          <h2>Mobile Controls</h2>
+          <div class="touch-row">
+            <button id="touchLeft">Left</button>
+            <button id="touchLaunch">Launch</button>
+            <button id="touchRight">Right</button>
+          </div>
+        </section>
+      </div>
+
       <aside class="control-panel">
         <h2>Controls</h2>
         <p><kbd>A</kbd>/<kbd>←</kbd> Left flipper</p>
@@ -35,12 +46,6 @@
           <button id="multiBtn">Trigger Multiball</button>
           <button id="resetBtn">Reset</button>
           <button id="muteBtn">Audio: Off</button>
-        </div>
-        <h2>Mobile</h2>
-        <div class="touch-row">
-          <button id="touchLeft">Left</button>
-          <button id="touchLaunch">Launch</button>
-          <button id="touchRight">Right</button>
         </div>
         <h2>Build Notes</h2>
         <ul>
