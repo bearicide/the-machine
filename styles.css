@@ -43,7 +43,8 @@ body::before {
 }
 
 .hero-panel,
-.control-panel {
+.control-panel,
+.mobile-panel {
   border: 1px solid var(--line);
   background: var(--panel);
   border-radius: 26px;
@@ -54,6 +55,11 @@ body::before {
 .hero-panel {
   padding: 22px;
   margin-bottom: 18px;
+}
+
+.mobile-panel {
+  margin-top: 14px;
+  padding: 14px;
 }
 
 .kicker {
@@ -132,7 +138,8 @@ canvas {
   padding: 18px;
 }
 
-.control-panel h2 {
+.control-panel h2,
+.mobile-panel h2 {
   margin: 8px 0;
   color: var(--gold);
 }
@@ -173,6 +180,46 @@ button:active { transform: translateY(1px) scale(0.99); }
 
 .button-grid { grid-template-columns: 1fr 1fr; }
 .touch-row { grid-template-columns: repeat(3, 1fr); }
+
+.debug-panel {
+  position: fixed;
+  left: 14px;
+  bottom: 14px;
+  width: min(420px, calc(100vw - 28px));
+  background: rgba(5, 1, 10, 0.96);
+  border: 1px solid rgba(0,245,255,0.35);
+  border-radius: 18px;
+  padding: 14px;
+  z-index: 9999;
+  box-shadow: 0 0 40px rgba(0,245,255,0.2);
+}
+
+.debug-panel.is-hidden {
+  display: none;
+}
+
+.debug-head,
+.debug-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.debug-head strong {
+  color: var(--cyan);
+}
+
+#debug-output {
+  max-height: 260px;
+  overflow: auto;
+  white-space: pre-wrap;
+  color: #d9f8ff;
+  background: rgba(255,255,255,0.04);
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
 
 @media (max-width: 900px) {
   .machine-wrap { grid-template-columns: 1fr; }
